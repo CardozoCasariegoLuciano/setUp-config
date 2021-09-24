@@ -33,9 +33,11 @@
 "Tabs
   map <Leader>h :tabprevious<CR>
   map <Leader>l :tabnext<CR>
+  nnoremap <Leader>ct :tabclose<CR>
 
 "Buffers
   map <Leader>ob :Buffers<CR>
+  nnoremap <Leader>cb :bd<CR>
 
 "scroll
   nnoremap <C-j> 10<C-e>
