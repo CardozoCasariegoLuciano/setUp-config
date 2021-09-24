@@ -17,6 +17,7 @@
   imap jj <Esc>
   nmap <Leader>w :w<CR>
   nmap <Leader>q :q<CR>
+  nmap <Leader>qa :qall<CR>
   nnoremap <F2> :setlocal spell! spelllang=es<CR>
   nnoremap <F4> :setlocal spell! spelllang=en<CR>
 
@@ -26,26 +27,32 @@
   nnoremap ,, <Esc>/<++><CR>"_c4l
 
 "tamaño divisiones
-nnoremap <Leader>> 25<C-w>>
-nnoremap <Leader>< 25<C-w><
+  nnoremap <Leader>> 25<C-w>>
+  nnoremap <Leader>< 25<C-w><
 
 "Tabs
-map <Leader>h :tabprevious<CR>
-map <Leader>l :tabnext<CR>
+  map <Leader>h :tabprevious<CR>
+  map <Leader>l :tabnext<CR>
 
 "Buffers
-map <Leader>ob :Buffers<CR>
+  map <Leader>ob :Buffers<CR>
 
 "scroll
-nnoremap <C-j> 10<C-e>
-nnoremap <C-k> 10<C-y>
+  nnoremap <C-j> 10<C-e>
+  nnoremap <C-k> 10<C-y>
+
+"terminal
+map <F12> :belowright terminal<CR>
+
+"Pluggins
+
+  "NERDTreeFind
+  nmap <Leader>nt :NERDTreeFind<CR>
+
+  "fzf
+  map <Leader>p :Files<CR>
+
+  "easymotion
+  nmap <Leader>s <Plug>(easymotion-s2)
 
 
-"NERDTreeFind
-nmap <Leader>nt :NERDTreeFind<CR>
-
-"fzf
-map <Leader>p :Files<CR>
-
-"easymotion
-nmap <Leader>>s <Plug>(easymotion-s2)
