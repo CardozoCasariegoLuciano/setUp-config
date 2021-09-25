@@ -32,8 +32,8 @@ filetype plugin on
 filetype plugin indent on
 filetype indent on
 
-autocmd BufWinLeave * mkview 
-autocmd BufWinEnter * silent loadview<ScrollWheelUp> 
+autocmd BufWinLeave ?* mkview 
+autocmd BufWinEnter ?* silent loadview<ScrollWheelUp> 
 
 so ~/.vim/map.vim
 so ~/.vim/pugins.vim

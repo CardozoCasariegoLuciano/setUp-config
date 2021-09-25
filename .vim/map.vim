@@ -16,7 +16,7 @@
 "configurar teclas
   imap jj <Esc>
   nmap <Leader>w :w<CR>
-  nmap <Leader>q :q<CR>
+  nmap <Leader>qq :q<CR>
   nmap <Leader>qa :qall<CR>
   nnoremap <F2> :setlocal spell! spelllang=es<CR>
   nnoremap <F4> :setlocal spell! spelllang=en<CR>
@@ -53,7 +53,7 @@ map <F12> :belowright terminal<CR>
 
   "fzf
   map <Leader>p :Files<CR>
-
+map  <Leader>ag :Ag<CR>
   "easymotion
   nmap <Leader>s <Plug>(easymotion-s2)
 

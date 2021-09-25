@@ -26,8 +26,8 @@ Plug 'sirver/ultisnips'
 
 
 "IDE
+Plug 'junegunn/fzf'   ", { 'do': { -> fzf#install()  }  } 
 Plug 'junegunn/fzf.vim'  
-Plug 'junegunn/fzf', { 'do': { -> fzf#install()  }  } 
 Plug 'easymotion/vim-easymotion'
 Plug 'mhinz/vim-signify'
 Plug 'yggdroot/indentline'
