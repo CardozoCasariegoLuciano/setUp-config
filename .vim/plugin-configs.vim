@@ -39,12 +39,11 @@ inoremap  <expr> <CR>  pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 set complete-=t
 set complete-=i
- set shortmess+=c
+set shortmess+=c
 
 
  "ultisnips
-let g:UltiSnipsExpandTrigger="<Leader>-"
-
+let g:UltiSnipsExpandTrigger="<F5>"
 
 "EasyMotion
 nmap s <Plug>(easymotion-overwin-f2)

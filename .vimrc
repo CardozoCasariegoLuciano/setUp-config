@@ -27,13 +27,17 @@ set noshowmode
 set mouse=a
  set modelines=0
 
+set foldmethod=indent
+set foldcolumn=1     " the number of columns to use for folding display at the left"
+set foldlevel=99
+
 filetype off
 filetype plugin on
 filetype plugin indent on
 filetype indent on
 
-autocmd BufWinLeave ?* mkview 
-autocmd BufWinEnter ?* silent loadview<ScrollWheelUp> 
+"autocmd BufWinLeave ?* mkview 
+"autocmd BufWinEnter ?* silent loadview<ScrollWheelUp> 
 
 so ~/.vim/map.vim
 so ~/.vim/pugins.vim

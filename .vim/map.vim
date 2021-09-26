@@ -7,6 +7,7 @@
 
 "desmarca las palabras buscadas
  nnoremap // :noh<return><Esc>
+ nnoremap <Esc><Esc> :noh<return><Esc>
 
  "para hacer espacios o saltos de linea en el modo normal
  nnoremap ss i<Space><Esc>
@@ -21,14 +22,14 @@
   nnoremap <F2> :setlocal spell! spelllang=es<CR>
   nnoremap <F4> :setlocal spell! spelllang=en<CR>
 
-"navegnado con gias
+"navegando con gias
   inoremap ,, <Esc>/<++><CR>"_c4l
   vnoremap ,, <Esc>/<++><CR>"_c4l
   nnoremap ,, <Esc>/<++><CR>"_c4l
 
 "tamaño divisiones
-  nnoremap <Leader>> 25<C-w>>
-  nnoremap <Leader>< 25<C-w><
+  nnoremap <Leader>> 15<C-w>>
+  nnoremap <Leader>< 15<C-w><
 
 "Tabs
   map <Leader>h :tabprevious<CR>
@@ -37,14 +38,15 @@
 
 "Buffers
   map <Leader>ob :Buffers<CR>
-  nnoremap <Leader>cb :bd<CR>
 
 "scroll
-  nnoremap <C-j> 10<C-e>
-  nnoremap <C-k> 10<C-y>
+  nnoremap <C-d> 10<C-e>
+  nnoremap <C-a> 10<C-y>
 
 "terminal
-map <F12> :belowright terminal<CR>
+  map <F12> :belowright terminal<CR>
+  set termwinsize=13x0
+
 
 "Pluggins
 
@@ -52,9 +54,11 @@ map <F12> :belowright terminal<CR>
   nmap <Leader>nt :NERDTreeFind<CR>
 
   "fzf
-  map <Leader>p :Files<CR>
-map  <Leader>ag :Ag<CR>
+  map <Leader>fi :Files<CR>
+  map  <Leader>ag :Ag<CR>
   "easymotion
   nmap <Leader>s <Plug>(easymotion-s2)
 
 
+  "zeavim
+  nmap <leader>z <Plug>ZVKeyDocset
