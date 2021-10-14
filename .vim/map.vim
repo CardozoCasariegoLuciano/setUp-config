@@ -1,4 +1,3 @@
-
 "noremap <Up> <NOP>
 "noremap <Down> <NOP>
 "noremap <Left> <NOP>
@@ -16,6 +15,7 @@
 
 "configurar teclas
   imap jj <Esc>
+  imap jk <Esc>
   nmap <Leader>w :w<CR>
   nmap <Leader>qq :q<CR>
   nmap <Leader>qa :qall<CR>
@@ -38,14 +38,25 @@
 
 "Buffers
   map <Leader>ob :Buffers<CR>
+  map <Leader>bd :bd<CR>
 
 "scroll
-  nnoremap <C-d> 10<C-e>
-  nnoremap <C-a> 10<C-y>
+  nnoremap <C-c> 10<C-e>
+  nnoremap <C-d> 10<C-y>
 
 "terminal
   map <F12> :belowright terminal<CR>
   set termwinsize=13x0
+
+
+" TAB in general mode will move to text buffer
+ nnoremap <TAB> :bnext<CR>
+" " SHIFT-TAB will go back
+ nnoremap <S-TAB> :bprevious<CR>
+
+" Better tabbing
+vnoremap < <gv
+vnoremap > >gv
 
 
 "Pluggins
@@ -55,7 +66,10 @@
 
   "fzf
   map <Leader>fi :Files<CR>
+  map <Leader>gf :GFiles<CR>
   map  <Leader>ag :Ag<CR>
+
+
   "easymotion
   nmap <Leader>s <Plug>(easymotion-s2)
 

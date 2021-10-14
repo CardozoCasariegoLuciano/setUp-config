@@ -3,7 +3,6 @@ let mapleader = " "
 syntax on 
 
 set nocompatible 
-set clipboard=unnamedplus  ""
 set nu rnu 
 set encoding=utf-8 ""
 set nolist 
@@ -22,12 +21,24 @@ set tabstop=2
 set expandtab ""
 set autoindent
 set smartindent 
-set laststatus=2
 set noshowmode
 set mouse=a
- set modelines=0
+set modelines=0
+set cmdheight=2
+set pumheight=10
+set iskeyword+=-
+set splitbelow
+set splitright
+set t_Co=256
+set laststatus=2
+set showtabline=2
+set formatoptions-=cro
+set clipboard=unnamedplus 
+set autochdir 
 
-set foldmethod=indent
+
+
+set foldmethod=manual
 set foldcolumn=1     " the number of columns to use for folding display at the left"
 set foldlevel=99
 
@@ -38,6 +49,8 @@ filetype indent on
 
 "autocmd BufWinLeave ?* mkview 
 "autocmd BufWinEnter ?* silent loadview<ScrollWheelUp> 
+autocmd BufNewFile,BufRead *.tsx,*js,*jsx,*ts  set foldmethod=syntax
+
 
 so ~/.vim/map.vim
 so ~/.vim/pugins.vim
