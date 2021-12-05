@@ -10,12 +10,12 @@
 
  "para hacer espacios o saltos de linea en el modo normal
  nnoremap ss i<Space><Esc>
- nnoremap aa i<Cr><Esc>
-
+ nnoremap aa o<Esc>
 
 "configurar teclas
   imap jj <Esc>
   imap jk <Esc>
+  nmap <C-c> <Esc>
   nmap <Leader>w :w<CR>
   nmap <Leader>qq :q<CR>
   nmap <Leader>qa :qall<CR>
@@ -45,34 +45,55 @@
   nnoremap <C-d> 10<C-y>
 
 "terminal
-  map <F12> :belowright terminal<CR>
-  set termwinsize=13x0
-
+  map <F12> :vert terminal<CR>
+  set termwinsize=0x80
 
 " TAB in general mode will move to text buffer
  nnoremap <TAB> :bnext<CR>
 " " SHIFT-TAB will go back
  nnoremap <S-TAB> :bprevious<CR>
 
+ "deleting all buffers except the current one
+ command CloseAllBuffers silent! execute "%bd|e#|bd#"
+ nnoremap <leader>cab :CloseAllBuffers<CR>
+
 " Better tabbing
 vnoremap < <gv
 vnoremap > >gv
+
+"remaping
+nnoremap gF <C-w>gf
+
+"Runing tests
+
+autocmd BufNewFile,BufRead *.tsx,*js,*jsx,*ts  call SetTestKeys()
+
+function GetCoutes ()
+  let testPattern = matchstr(getline('.'), '"\zs[^"]\+\ze"')
+  echo testPattern
+endfunction
+
+function SetTestKeys()
+  nmap <silent> Ts :vert terminal npm run test -- -u NODE_ENV="test" --watchAll=false <CR>
+  nmap <silent> Tf :vert terminal npm run test % -- -u NODE_ENV="test" --watchAll=false<CR>
+  nmap <silent> Tt :vert terminal npm run test -- -u NODE_ENV="test" --watchAll=false -t "
+  nmap <silent> Trs :! npm run test -- --verbose --watchAll=false<CR>
+  nmap <silent> Trf :! npm run test % -- --watchAll=false<CR>
+endfunction
 
 
 "Pluggins
 
   "NERDTreeFind
-  nmap <Leader>nt :NERDTreeFind<CR>
+  nmap <Leader>nt :NERDTreeToggle<CR>
 
   "fzf
-  map <Leader>fi :Files<CR>
-  map <Leader>gf :GFiles<CR>
-  map  <Leader>ag :Ag<CR>
-
+  map <Leader>Fi :Files<CR>
+  map <Leader>Fg :GFiles<CR>
+  map  <Leader>Fa :Ag<CR>
 
   "easymotion
   nmap <Leader>s <Plug>(easymotion-s2)
-
 
   "zeavim
   nmap <leader>z <Plug>ZVKeyDocset

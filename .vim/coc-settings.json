@@ -1,0 +1,4 @@
+{
+  "typescript.referencesCodeLens.enable": true ,
+  "javascript.referencesCodeLens.enable": true 
+}

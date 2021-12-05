@@ -25,10 +25,12 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 let g:coc_global_extensions = ['coc-snippets', 'coc-emmet', 'coc-prettier', 'coc-pairs', 'coc-html', 'coc-tsserver', 'coc-json', 'coc-css', 'coc-pyright']
 Plug 'sirver/ultisnips' 
 Plug 'honza/vim-snippets'
+Plug 'epilande/vim-es2015-snippets'
+Plug 'epilande/vim-react-snippets'
 
 
 "IDE
-Plug 'junegunn/fzf'   ", { 'do': { -> fzf#install()  }  } 
+Plug 'junegunn/fzf'   
 Plug 'junegunn/fzf.vim'  
 Plug 'easymotion/vim-easymotion'
 Plug 'mhinz/vim-signify'
@@ -37,9 +39,17 @@ Plug 'preservim/nerdcommenter'
 Plug 'KabbAmine/zeavim.vim'  
 Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'} 
 Plug 'dense-analysis/ale'  
+Plug 'ap/vim-css-color'
+
+"Testing
+Plug 'roxma/nvim-yarp'
+Plug 'roxma/vim-hug-neovim-rpc'
+Plug 'vim-test/vim-test'
+Plug 'rcarriga/vim-ultest'  
 
 "others
 Plug 'neoclide/jsonc.vim'
+Plug 'junegunn/goyo.vim'
 
 call plug#end()
 

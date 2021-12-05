@@ -56,3 +56,20 @@ let g:closetag_regions = {
 \ }
 
 
+"Vim-Test
+" Dejo de andar de la nada y no puedo encontrar la solucion LPM
+" Es ALTO Plug
+"Update: Es medio una cagada jajaja, anda cuando se le canta el culo
+
+nmap <silent> tn :TestNearest<CR>
+nmap <silent> tf :TestFile<CR>
+nmap <silent> ts :TestSuite<CR>
+nmap <silent> tl :TestLast<CR>
+nmap <silent> tg :TestVisit<CR>
+
+let g:test#javascript#jest#executable = 'npx jest --detectOpenHandles'
+let g:test#javascript#runner = 'jest'
+
+"Goyo
+nmap <Leader>g :Goyo<CR>
+nmap <Leader>G :Goyo!<CR>

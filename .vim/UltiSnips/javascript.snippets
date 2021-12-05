@@ -6,3 +6,23 @@ endsnippet
 snippet todo "A todo snip" b 
 {/* TODO: ${1:desc} `!v strftime("%c")`  */}
 endsnippet
+
+
+snippet test  "Test" b
+test(${1:desc}, async()=>{
+})
+endsnippet
+
+snippet adp "Añadir un puntero para acceder con ,, "
+<++>
+endsnippet
+
+snippet ncm "New basic react structure" b
+
+const ${1:ComponentName} = () =>{
+
+return( <h1>$1</h1> )
+}
+
+export default $1
+endsnippet

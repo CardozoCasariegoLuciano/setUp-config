@@ -4,7 +4,7 @@ syntax on
 
 set nocompatible 
 set nu rnu 
-set encoding=utf-8 ""
+set encoding=UTF-8
 set nolist 
 set ignorecase smartcase 
 set hidden 
@@ -32,28 +32,28 @@ set splitright
 set t_Co=256
 set laststatus=2
 set showtabline=2
-set formatoptions-=cro
 set clipboard=unnamedplus 
 set autochdir 
-
-
-
 set foldmethod=manual
 set foldcolumn=1     " the number of columns to use for folding display at the left"
 set foldlevel=99
 
-filetype off
+
+filetype on
 filetype plugin on
 filetype plugin indent on
 filetype indent on
 
-"autocmd BufWinLeave ?* mkview 
-"autocmd BufWinEnter ?* silent loadview<ScrollWheelUp> 
-autocmd BufNewFile,BufRead *.tsx,*js,*jsx,*ts  set foldmethod=syntax
-
+autocmd BufWinLeave ?* mkview 
+autocmd BufWinEnter ?* silent loadview 
+autocmd BufNewFile,BufRead *.tsx,*.js,*.jsx,*.ts,*.css set foldmethod=syntax
+autocmd BufNewFile,BufRead *.html setlocal foldmethod=indent
+autocmd BufEnter * set fo-=c fo-=r fo-=o
 
 so ~/.vim/map.vim
 so ~/.vim/pugins.vim
 so ~/.vim/plugin-configs.vim
 
 colorscheme papaya 
+
+
