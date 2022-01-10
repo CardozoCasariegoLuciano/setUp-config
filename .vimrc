@@ -37,7 +37,8 @@ set autochdir
 set foldmethod=manual
 set foldcolumn=1     " the number of columns to use for folding display at the left"
 set foldlevel=99
-
+set guioptions-=e
+set sessionoptions+=tabpages,globals
 
 filetype on
 filetype plugin on

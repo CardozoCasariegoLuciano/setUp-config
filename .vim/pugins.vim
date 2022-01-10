@@ -50,6 +50,7 @@ Plug 'rcarriga/vim-ultest'
 "others
 Plug 'neoclide/jsonc.vim'
 Plug 'junegunn/goyo.vim'
+Plug 'gcmt/taboo.vim'
 
 call plug#end()
 
