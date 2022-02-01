@@ -1,7 +1,4 @@
-"noremap <Up> <NOP>
-"noremap <Down> <NOP>
-"noremap <Left> <NOP>
-"noremap <Right> <NOP>
+let mapleader = " " 
 
 
 "desmarca las palabras buscadas
@@ -11,34 +8,40 @@
  "para hacer espacios o saltos de linea en el modo normal
  nnoremap ss i<Space><Esc>
  nnoremap aa o<Esc>
+ nnoremap aA i<CR><Esc>
 
-"configurar teclas
+"salir de M.I
   imap jj <Esc>
   imap jk <Esc>
-  nmap <C-c> <Esc>
+  imap <C-c> <Esc>
+
+"Guardar o salir
   nmap <Leader>w :w<CR>
   nmap <Leader>qq :q<CR>
   nmap <Leader>qa :qall<CR>
+
+"corrector ortográfico
   nnoremap <F2> :setlocal spell! spelllang=es<CR>
   nnoremap <F4> :setlocal spell! spelllang=en<CR>
 
-"navegando con gias
-  inoremap ,, <Esc>/<++><CR>"_c4l
-  vnoremap ,, <Esc>/<++><CR>"_c4l
-  nnoremap ,, <Esc>/<++><CR>"_c4l
-
 "tamaño divisiones
-  nnoremap <Leader>> 15<C-w>>
-  nnoremap <Leader>< 15<C-w><
+  nnoremap <Leader><LEFT> 15<C-w>>
+  nnoremap <Leader><RIGHT> 15<C-w><
+  nnoremap <Leader><UP> 5<C-w>+
+  nnoremap <Leader><DOWN> 5<C-w>-
 
 "Tabs
   map <Leader>h :tabprevious<CR>
   map <Leader>l :tabnext<CR>
   nnoremap <Leader>ct :tabclose<CR>
 
-"Buffers
-  map <Leader>ob :Buffers<CR>
+"Cerrar Buffers
   map <Leader>bd :bd<CR>
+
+"navegar entre buffers
+ nnoremap <TAB> :bnext<CR>
+ nnoremap <S-TAB> :bprevious<CR>
+
 
 "scroll
   nnoremap <C-c> 10<C-e>
@@ -48,24 +51,19 @@
   map <F12> :vert terminal<CR>
   set termwinsize=0x80
 
-" TAB in general mode will move to text buffer
- nnoremap <TAB> :bnext<CR>
-" " SHIFT-TAB will go back
- nnoremap <S-TAB> :bprevious<CR>
 
- "deleting all buffers except the current one
+"Cerrar todos los buffers menos el actual
  command CloseAllBuffers silent! execute "%bd|e#|bd#"
  nnoremap <leader>cab :CloseAllBuffers<CR>
 
-" Better tabbing
+"Mejor tabulado
 vnoremap < <gv
 vnoremap > >gv
 
-"remaping
+"Abrir en una nueva pestaña
 nnoremap gF <C-w>gf
 
 "Runing tests
-
 autocmd BufNewFile,BufRead *.tsx,*js,*jsx,*ts  call SetTestKeys()
 
 function GetCoutes ()
@@ -74,7 +72,7 @@ function GetCoutes ()
 endfunction
 
 function SetTestKeys()
-  nmap <silent> Ts :vert terminal npm run test -- -u NODE_ENV="test" --watchAll=false <CR>
+  nmap <silent> Ts :vert terminal npm run test -- -u NODE_ENV=test --watchAll=false <CR>
   nmap <silent> Tf :vert terminal npm run test % -- -u NODE_ENV="test" --watchAll=false<CR>
   nmap <silent> Tt :vert terminal npm run test -- -u NODE_ENV="test" --watchAll=false -t "
   nmap <silent> Trs :! npm run test -- --verbose --watchAll=false<CR>
@@ -82,18 +80,16 @@ function SetTestKeys()
 endfunction
 
 
-"Pluggins
+"executig programs
+autocmd BufNewFile,BufRead *.py  call RunPythonFile()
+autocmd BufNewFile,BufRead *.js  call RunJavaScriptFile()
 
-  "NERDTreeFind
-  nmap <Leader>nt :NERDTreeToggle<CR>
 
-  "fzf
-  map <Leader>Fi :Files<CR>
-  map <Leader>Fg :GFiles<CR>
-  map  <Leader>Fa :Ag<CR>
+function RunPythonFile()
+  nmap <Leader>r :vert terminal python3 %<CR>
+endfunction
 
-  "easymotion
-  nmap <Leader>s <Plug>(easymotion-s2)
+function RunJavaScriptFile()
+  nmap <Leader>r :vert terminal node %<CR>
+endfunction
 
-  "zeavim
-  nmap <leader>z <Plug>ZVKeyDocset

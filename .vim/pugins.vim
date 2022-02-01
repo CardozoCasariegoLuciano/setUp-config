@@ -5,10 +5,16 @@ Plug 'sheerun/vim-polyglot'
 
 "THEME
 Plug 'HenryNewcomer/vim-theme-papaya'
+Plug 'mangeshrex/uwu.vim'
+Plug 'sainnhe/gruvbox-material'
+Plug 'rakr/vim-one'
+Plug 'sainnhe/sonokai'
+Plug 'tomasiser/vim-code-dark'
 
 
 "StatusBar
 Plug 'vim-airline/vim-airline' 
+Plug 'vim-airline/vim-airline-themes'
 
 "Tree
 Plug 'scrooloose/nerdtree' 
@@ -33,7 +39,7 @@ Plug 'epilande/vim-react-snippets'
 Plug 'junegunn/fzf'   
 Plug 'junegunn/fzf.vim'  
 Plug 'easymotion/vim-easymotion'
-Plug 'mhinz/vim-signify'
+Plug 'airblade/vim-gitgutter'
 Plug 'yggdroot/indentline'
 Plug 'preservim/nerdcommenter' 
 Plug 'KabbAmine/zeavim.vim'  
@@ -51,8 +57,13 @@ Plug 'rcarriga/vim-ultest'
 Plug 'neoclide/jsonc.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'gcmt/taboo.vim'
+Plug 'airblade/vim-rooter'
+Plug 'liuchengxu/vim-which-key'
+Plug 'mhinz/vim-startify'
 
 call plug#end()
 
+
+source ~/.vim/themes.vim
 
 
