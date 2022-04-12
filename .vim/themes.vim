@@ -16,31 +16,20 @@ if has('termguicolors')
   set termguicolors
 endif
 
-"Configuracion especial para Sonokai (tiene que ir antes del colorscheme)
-
-let g:sonokai_style = 'andromeda'
-"let g:sonokai_style = 'shusia'
-"let g:sonokai_style = 'maia'
-"let g:sonokai_style = 'espresso'
-let g:sonokai_enable_italic = 1
-let g:sonokai_disable_italic_comment = 1
 
 
 
 "THEMES:
 " papaya
 " one
-" gruvbox-material
-" sonokai
-" uwu
 " codedark
+" nord
+" OceanicNext
+" palenight
+" base16-atelier-cave
 
 colorscheme one 
-
-
 set background=dark
-"set background=light
-
 
 
 redir => current_colorscheme

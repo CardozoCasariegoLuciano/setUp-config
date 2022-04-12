@@ -3,17 +3,18 @@ call plug#begin('~/.vim/plugged')
 "Syntax
 Plug 'sheerun/vim-polyglot'
 
-"THEME
-Plug 'HenryNewcomer/vim-theme-papaya'
-Plug 'mangeshrex/uwu.vim'
-Plug 'sainnhe/gruvbox-material'
+"THEMES
 Plug 'rakr/vim-one'
-Plug 'sainnhe/sonokai'
 Plug 'tomasiser/vim-code-dark'
+Plug 'HenryNewcomer/vim-theme-papaya'
+Plug 'chriskempson/base16-vim'
+Plug 'arcticicestudio/nord-vim'
+Plug 'mhartington/oceanic-next'
+Plug 'drewtempelmeyer/palenight.vim'
 
 
-"StatusBar
-Plug 'vim-airline/vim-airline' 
+"Status bar
+Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 "Tree
@@ -27,8 +28,8 @@ Plug 'alvan/vim-closetag'
 Plug 'christoomey/vim-tmux-navigator' 
 
 "AutoComplete
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-let g:coc_global_extensions = ['coc-snippets', 'coc-emmet', 'coc-prettier', 'coc-pairs', 'coc-html', 'coc-tsserver', 'coc-json', 'coc-css', 'coc-pyright']
+Plug 'neoclide/coc.nvim', {'branch': 'release'}    
+let g:coc_global_extensions = ['coc-snippets', 'coc-emmet', 'coc-prettier', 'coc-pairs', 'coc-html', 'coc-tsserver', 'coc-json', 'coc-css', 'coc-pyright', '@yaegassy/coc-intelephense'] 
 Plug 'sirver/ultisnips' 
 Plug 'honza/vim-snippets'
 Plug 'epilande/vim-es2015-snippets'
@@ -40,12 +41,14 @@ Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'  
 Plug 'easymotion/vim-easymotion'
 Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
 Plug 'yggdroot/indentline'
-Plug 'preservim/nerdcommenter' 
+Plug 'preservim/nerdcommenter'
 Plug 'KabbAmine/zeavim.vim'  
-Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'} 
 Plug 'dense-analysis/ale'  
 Plug 'ap/vim-css-color'
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+Plug 'stephpy/vim-php-cs-fixer'
 
 "Testing
 Plug 'roxma/nvim-yarp'
@@ -61,9 +64,6 @@ Plug 'airblade/vim-rooter'
 Plug 'liuchengxu/vim-which-key'
 Plug 'mhinz/vim-startify'
 
+
 call plug#end()
-
-
-source ~/.vim/themes.vim
-
 

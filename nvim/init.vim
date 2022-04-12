@@ -23,6 +23,7 @@ set clipboard=unnamedplus
 set foldcolumn=2
 set sessionoptions+=tabpages,globals
 
+
 set nolist
 set hidden
 set showmatch
@@ -40,8 +41,6 @@ filetype indent on
 
 autocmd BufWinLeave ?* mkview 
 autocmd BufWinEnter ?* silent loadview 
-autocmd BufNewFile,BufRead *.tsx,*.js,*.jsx,*.ts,*.css,*.py set foldmethod=syntax
-autocmd BufNewFile,BufRead *.html setlocal foldmethod=indent
 autocmd BufEnter * set fo-=c fo-=r fo-=o 
 
 so ~/.config/nvim/pluggins.vim

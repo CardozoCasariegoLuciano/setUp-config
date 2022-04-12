@@ -1,0 +1,8 @@
+snippet nctrl "new controller" b
+export const ${1:ComponentName} = async (req: Request ,res:Response) => {
+	try{
+	}catch(err){
+	 return res.status(400).json({Message: "Something went wrong", Error: err})
+	}
+}
+endsnippet

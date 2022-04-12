@@ -1,11 +1,30 @@
 {
+
+  //Javascript/Typescript
   "typescript.referencesCodeLens.enable": true,
   "javascript.referencesCodeLens.enable": true,
   "javascript.suggestionActions.enabled": false,
+  "javascript.suggest.autoImports": true, 
+  "typescript.suggest.autoImports": true,
   "diagnostic.displayByAle": true,
-  "emmet.includeLanguages": { "javascript": "javascriptreact", "typescript": "typescriptreact" },
+  "emmet.showExpandedAbbreviation": "always",
+  "emmet.syntaxProfiles": {"php":"html", "blade":"html"},
+  "emmet.includeLanguages": { "javascript": "javascriptreact", "typescript": "typescriptreact", "php": "html", "blade": "html" },
+
+
+  //Python
   "python.formatting.provider": "black",
   //"coc.preferences.formatOnSaveFiletypes": ["python3", "python"],
   "coc.preferences.formatOnType": true,
-  "python.formatting.blackPath": "~/.local/bin/black"
+  "python.formatting.blackPath": "~/.local/bin/black",
+
+
+  //PHP
+  "intelephense.diagnostics.undefinedTypes": false,
+  "intelephense.diagnostics.undefinedFunctions": false,
+  "intelephense.diagnostics.undefinedConstants": false,
+  "intelephense.diagnostics.undefinedClassConstants": false,
+  "intelephense.diagnostics.undefinedMethods": false,
+  "intelephense.diagnostics.undefinedProperties": false,
+  "intelephense.diagnostics.undefinedVariables": false
 }

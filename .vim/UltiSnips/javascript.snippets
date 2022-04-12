@@ -13,15 +13,17 @@ test(${1:desc}, async()=>{
 })
 endsnippet
 
-snippet adp "Añadir un puntero para acceder con ,, "
-<++>
-endsnippet
 
 snippet ncm "New basic react structure" b
+import React from "react"
 
 const ${1:ComponentName} = () =>{
 
-return( <h1>$1</h1> )
+return( 
+	<div className="$1">
+		<h1>$1</h1>
+	</div>
+ )
 }
 
 export default $1
