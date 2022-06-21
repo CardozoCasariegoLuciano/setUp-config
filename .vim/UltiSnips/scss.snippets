@@ -1,0 +1,49 @@
+snippet mixin "create mixin" b
+@mixin ${1:name}(){
+ ${2:content}
+}
+endsnippet
+
+
+snippet use "use" b
+@use "${1:name}";
+endsnippet
+
+snippet forward "use" b
+@forward "${1:name}";
+endsnippet
+
+snippet include "include mixin" b
+@include ${1:name}();
+endsnippet
+
+snippet ret "return" b
+@return ${1:code};
+endsnippet
+
+snippet func "create a function" b
+@function ${1:name}(${2:args}){
+ ${3:content}
+}
+endsnippet
+
+
+snippet if "create a if statement" b
+@if (${1:condition}){
+ ${3:content}
+}
+endsnippet
+
+snippet ifel "create a ifelse statement" b
+@if (${1:condition}){
+ ${3:content}
+}@else{
+ ${4:content}
+}
+endsnippet
+
+
+snippet each "create a each statement" b
+@each ${1:item} in ${2:iterable}{
+}
+endsnippet

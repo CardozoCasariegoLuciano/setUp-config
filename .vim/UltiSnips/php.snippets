@@ -1,11 +1,19 @@
-snippet php
+snippet php " add php tags" b
 <?php
 ${0}
 ?>
 endsnippet
 
+snippet phpl "Add php tag in a line" i 
+<?php ${0} ?>
+endsnippet
+
+snippet php= "Add echo tag in a line" i 
+<?= ${0} ?>
+endsnippet
+
 snippet va
-$${0:variable} = ${1:valor};
+$${1:variable} = ${2:valor};
 endsnippet
 
 snippet public

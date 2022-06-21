@@ -28,7 +28,7 @@ endif
 " palenight
 " base16-atelier-cave
 
-colorscheme one 
+colorscheme one
 set background=dark
 
 

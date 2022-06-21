@@ -25,6 +25,7 @@ set foldcolumn=2
 set sessionoptions+=tabpages,globals
 set hlsearch
 set foldlevel=99
+set foldmethod=indent
 
 
 "Opciones que o ya estan por defecto activas
@@ -43,18 +44,14 @@ filetype plugin on
 filetype plugin indent on
 filetype indent on
 
+"autocmd BufNewFile,BufRead *.tsx,*.js,*.jsx,*.ts,*.css set foldmethod=syntax
+"autocmd BufNewFile,BufRead *.html,*.php,*.py setlocal foldmethod=indent
+autocmd BufNewFile,BufRead *.txt setlocal foldmethod=manual
+autocmd BufEnter * set fo-=c fo-=r fo-=o 
 autocmd BufWinLeave ?* mkview 
 autocmd BufWinEnter ?* silent loadview 
-autocmd BufNewFile,BufRead *.tsx,*.js,*.jsx,*.ts,*.css set foldmethod=syntax
-autocmd BufNewFile,BufRead *.html,*.php,*.py setlocal foldmethod=indent
-autocmd BufEnter * set fo-=c fo-=r fo-=o 
 
 so ~/.vim/mapping.vim
 so ~/.vim/pluggins.vim
 so ~/.vim/pluggins_config.vim
 so ~/.vim/themes.vim
-
-
-
-
-

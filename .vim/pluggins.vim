@@ -29,7 +29,7 @@ Plug 'christoomey/vim-tmux-navigator'
 
 "AutoComplete
 Plug 'neoclide/coc.nvim', {'branch': 'release'}    
-let g:coc_global_extensions = ['coc-snippets', 'coc-emmet', 'coc-prettier', 'coc-pairs', 'coc-html', 'coc-tsserver', 'coc-json', 'coc-css', 'coc-pyright', '@yaegassy/coc-intelephense'] 
+let g:coc_global_extensions = ['coc-snippets', 'coc-emmet', 'coc-prettier', 'coc-pairs', 'coc-html', 'coc-tsserver', 'coc-json', 'coc-css', 'coc-pyright', '@yaegassy/coc-intelephense', 'coc-java-debug', 'coc-java'] 
 Plug 'sirver/ultisnips' 
 Plug 'honza/vim-snippets'
 Plug 'epilande/vim-es2015-snippets'
@@ -49,6 +49,8 @@ Plug 'dense-analysis/ale'
 Plug 'ap/vim-css-color'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'stephpy/vim-php-cs-fixer'
+Plug 'adoy/vim-php-refactoring-toolbox'
+Plug 'puremourning/vimspector'
 
 "Testing
 Plug 'roxma/nvim-yarp'
@@ -63,6 +65,10 @@ Plug 'gcmt/taboo.vim'
 Plug 'airblade/vim-rooter'
 Plug 'liuchengxu/vim-which-key'
 Plug 'mhinz/vim-startify'
+
+"Wordpress
+"Plug 'dsawardekar/wordpress.vim'
+"Plug 'kien/ctrlp.vim'
 
 
 call plug#end()

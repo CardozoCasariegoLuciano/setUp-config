@@ -1,6 +1,5 @@
 let mapleader = " " 
 
-
 "desmarca las palabras buscadas
 nnoremap // :noh<return><Esc>
 nnoremap <Esc><Esc> :noh<return><Esc>
@@ -58,6 +57,9 @@ set termwinsize=0x80
 command CloseAllBuffers silent! execute "%bd|e#|bd#"
 nnoremap <leader>cab :CloseAllBuffers<CR>
 
+"replace method
+nmap <Leader>ñ :%s/<C-r><C-w>/X/gc
+
 "Mejor tabulado
 vnoremap < <gv
 vnoremap > >gv
@@ -81,6 +83,11 @@ nmap <silent> Trs :! npm run test -- --verbose --watchAll=false<CR>
 nmap <silent> Trf :! npm run test % -- --watchAll=false<CR>
 endfunction
 
+"Compile SASS
+nmap <Leader>rc :! sass % css/%:t:r.css<CR>
+nmap <Leader>rcw :! sass % css/%:t:r.css -w<CR>
+
+ 
 
 
 "executig programs
@@ -90,15 +97,15 @@ autocmd BufNewFile,BufRead *.php  call RunPHPFile()
 
 
 function RunPythonFile()
-nmap <Leader>r :vert terminal python3 %<CR>
+nmap <Leader>rf :vert terminal python3 %<CR>
 endfunction
 
 function RunJavaScriptFile()
-nmap <Leader>r :vert terminal node %<CR>
+nmap <Leader>rf :vert terminal node %<CR>
 endfunction
 
 function RunPHPFile()
-nmap <Leader>r :vert terminal php %<CR>
+nmap <Leader>rf :vert terminal php %<CR>
 endfunction
 
 

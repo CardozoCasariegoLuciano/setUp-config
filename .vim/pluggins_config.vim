@@ -14,6 +14,8 @@ let g:ale_linters = {'javascript': ['eslint']}
 "Plgguin de NerdTree
   let NERDTreeQuitOnOpen=1  
   nmap <Leader>nt :NERDTreeToggle<CR>
+" Open the existing NERDTree on each new tab.
+autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
 
 
 "Plgguin CoC
@@ -80,7 +82,6 @@ let g:ale_linters = {'javascript': ['eslint']}
 
 "Goyo
   nmap <Leader>g :Goyo<CR>
-  nmap <Leader>G :Goyo!<CR>
 
 
 "Vim-rooter
@@ -109,7 +110,7 @@ let g:ale_linters = {'javascript': ['eslint']}
   nmap <Leader>Hu <Plug>(GitGutterUndoHunk)
 
 
-  "Vim-php-cs-fixer
+"Vim-php-cs-fixer
   let g:php_cs_fixer_path = "~/.config/composer/vendor/bin/php-cs-fixer" " define the path to the php-cs-fixer.phar
 
   let g:php_cs_fixer_php_path = "php"               " Path to PHP
@@ -117,3 +118,19 @@ let g:ale_linters = {'javascript': ['eslint']}
   let g:php_cs_fixer_dry_run = 0                    " Call command with dry-run option
   let g:php_cs_fixer_verbose = 0                    "Return the output of command if 1, else an inline information.
   nnoremap <silent><leader>p :call PhpCsFixerFixFile()<CR>
+
+"VimSpector
+
+let g:vimspector_enable_mappings = 'HUMAN'
+nmap <Leader>dd :call vimspector#Launch()<CR>
+nmap <Leader>dx :vimspectorReset<CR>
+nmap <Leader>de :vimspectorEval
+nmap <Leader>dw :vimspectorWatch
+nmap <Leader>do :vimspectorShowOutPut
+
+nmap <Leader><F1> :call vimspector#StepOver()<CR>
+nmap <Leader><F2> :call vimspector#StepInto()<CR>
+nmap <Leader><F3> :call vimspector#StepOut()<CR>
+autocmd FileType java nmap <Leader>dd :CocCommand java.debug.vimspector.start<CR>
+
+"java -Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=5005,suspend=y <main-file>

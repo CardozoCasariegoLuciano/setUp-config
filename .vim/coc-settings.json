@@ -17,6 +17,9 @@
   //"coc.preferences.formatOnSaveFiletypes": ["python3", "python"],
   "coc.preferences.formatOnType": true,
   "python.formatting.blackPath": "~/.local/bin/black",
+  "python.analysis.diagnosticSeverityOverrides": {
+    "reportMissingImports": "none"
+  },
 
 
   //PHP
