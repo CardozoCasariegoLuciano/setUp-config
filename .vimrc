@@ -36,8 +36,7 @@ set showmatch
 set showcmd
 set ruler
 set numberwidth=1
-"autochdir  => hace algo con la ruta raiz, mejor no tenerlo
-
+"set autochdir
 
 filetype on
 filetype plugin on

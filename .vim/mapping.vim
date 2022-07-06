@@ -21,7 +21,7 @@ nmap <Leader>qa :qall<CR>
 
 "corrector ortográfico
 nnoremap <F2> :setlocal spell! spelllang=es<CR>
-nnoremap <F4> :setlocal spell! spelllang=en<CR>
+nnoremap <F3> :setlocal spell! spelllang=en<CR>
 
 "tamaño divisiones
 nnoremap <Leader><LEFT> 15<C-w>>

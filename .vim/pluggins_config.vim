@@ -23,7 +23,7 @@ autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
 	
 
 "Coc- formater
-  autocmd FileType python,blade call FormatPythonFile()
+  autocmd FileType python,blade,php call FormatPythonFile()
   autocmd BufNewFile,BufRead *.js,*.ts,*.tsx,*.jsx,*.css,*scss,*.html  call FormatJSFile()
 
   function FormatPythonFile()
@@ -85,7 +85,9 @@ autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
 
 
 "Vim-rooter
-  let g:rooter_patterns = ['.git', 'package.json' ,'Makefile', '*.sln', 'build/env.sh', "Pipfile", "pyrightconfig.json"]
+  let g:rooter_patterns = ['package.json' ,'Makefile', '*.sln', 'build/env.sh', "Pipfile", "pyrightconfig.json"]
+  "let g:rooter_change_directory_for_non_project_files = 'current'
+  "let g:rooter_manual_only = 1
 
 
 "vim-which-key

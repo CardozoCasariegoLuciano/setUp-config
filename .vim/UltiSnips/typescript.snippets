@@ -6,3 +6,17 @@ export const ${1:ComponentName} = async (req: Request ,res:Response) => {
 	}
 }
 endsnippet
+
+
+
+snippet acomponent "new angular component" b
+import { Component } from "@angular/core";
+
+@Component({
+  selector : "app-${1:selector}",
+  templateUrl : "./${1:template}.component.html",
+})
+
+export class ${1/\w+/\u$0/g}Component {
+}
+endsnippet

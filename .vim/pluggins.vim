@@ -29,7 +29,7 @@ Plug 'christoomey/vim-tmux-navigator'
 
 "AutoComplete
 Plug 'neoclide/coc.nvim', {'branch': 'release'}    
-let g:coc_global_extensions = ['coc-snippets', 'coc-emmet', 'coc-prettier', 'coc-pairs', 'coc-html', 'coc-tsserver', 'coc-json', 'coc-css', 'coc-pyright', '@yaegassy/coc-intelephense', 'coc-java-debug', 'coc-java'] 
+let g:coc_global_extensions = ['coc-snippets', 'coc-emmet', 'coc-prettier', 'coc-pairs', 'coc-html', 'coc-tsserver', 'coc-json', 'coc-css', 'coc-pyright', '@yaegassy/coc-intelephense', 'coc-java-debug', 'coc-java', 'coc-angular'] 
 Plug 'sirver/ultisnips' 
 Plug 'honza/vim-snippets'
 Plug 'epilande/vim-es2015-snippets'
@@ -62,14 +62,11 @@ Plug 'rcarriga/vim-ultest'
 Plug 'neoclide/jsonc.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'gcmt/taboo.vim'
-Plug 'airblade/vim-rooter'
 Plug 'liuchengxu/vim-which-key'
 Plug 'mhinz/vim-startify'
 
-"Wordpress
-"Plug 'dsawardekar/wordpress.vim'
-"Plug 'kien/ctrlp.vim'
-
+"temporalmente deshabilitado
+Plug 'airblade/vim-rooter'
 
 call plug#end()
 
