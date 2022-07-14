@@ -20,8 +20,8 @@ nmap <Leader>qq :q<CR>
 nmap <Leader>qa :qall<CR>
 
 "corrector ortográfico
-nnoremap <F2> :setlocal spell! spelllang=es<CR>
-nnoremap <F3> :setlocal spell! spelllang=en<CR>
+nnoremap <Leader>les :setlocal spell! spelllang=es<CR>
+nnoremap <Leader>len :setlocal spell! spelllang=en<CR>
 
 "tamaño divisiones
 nnoremap <Leader><LEFT> 15<C-w>>
