@@ -16,11 +16,16 @@ if has('termguicolors')
   set termguicolors
 endif
 
+" Enable true color
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
 
 
 
 "THEMES:
-" papaya
 " one
 " codedark
 " nord
@@ -28,17 +33,9 @@ endif
 " palenight
 " base16-atelier-cave
 
-colorscheme one
+colorscheme base16-atelier-cave
 set background=dark
-
-
-redir => current_colorscheme
-  silent colorscheme
-redir END
-
-if current_colorscheme =~ 'papaya'
-  set notermguicolors
-endif
+set t_Co=256
 
 
 

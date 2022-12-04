@@ -6,7 +6,6 @@ Plug 'sheerun/vim-polyglot'
 "THEMES
 Plug 'rakr/vim-one'
 Plug 'tomasiser/vim-code-dark'
-Plug 'HenryNewcomer/vim-theme-papaya'
 Plug 'chriskempson/base16-vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'mhartington/oceanic-next'
@@ -35,7 +34,6 @@ Plug 'honza/vim-snippets'
 Plug 'epilande/vim-es2015-snippets'
 Plug 'epilande/vim-react-snippets'
 
-
 "IDE
 Plug 'junegunn/fzf'   
 Plug 'junegunn/fzf.vim'  
@@ -44,19 +42,15 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'yggdroot/indentline'
 Plug 'preservim/nerdcommenter'
-Plug 'KabbAmine/zeavim.vim'  
 Plug 'dense-analysis/ale'  
 Plug 'ap/vim-css-color'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
-Plug 'stephpy/vim-php-cs-fixer'
-Plug 'adoy/vim-php-refactoring-toolbox'
-Plug 'puremourning/vimspector'
 
 "Testing
-Plug 'roxma/nvim-yarp'
-Plug 'roxma/vim-hug-neovim-rpc'
-Plug 'vim-test/vim-test'
-Plug 'rcarriga/vim-ultest'  
+"Plug 'roxma/nvim-yarp'
+"Plug 'roxma/vim-hug-neovim-rpc'
+"Plug 'vim-test/vim-test'
+"Plug 'rcarriga/vim-ultest'  
 
 "others
 Plug 'neoclide/jsonc.vim'

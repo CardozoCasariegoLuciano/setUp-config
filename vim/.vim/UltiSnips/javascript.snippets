@@ -1,0 +1,42 @@
+snippet clg "console.log" i
+console.log(${1:algo})
+endsnippet
+
+
+snippet todo "A todo snip" b 
+{/* TODO: ${1:desc} `!v strftime("%c")`  */}
+endsnippet
+
+
+snippet test  "Test" b
+test(${1:desc}, async()=>{
+})
+endsnippet
+
+
+snippet ncm "New basic react structure" b
+import React from "react"
+
+const ${1:ComponentName} = () =>{
+
+return( 
+	<div className="$1">
+		<h1>$1</h1>
+	</div>
+ )
+}
+
+export default $1
+endsnippet
+
+snippet nctrl "new controller" b
+
+exports.${1:ComponentName} = async (req,res) => {
+	try{
+
+	}catch(err){
+	 return res.status(400).json("Something went wrong")
+	}
+}
+
+endsnippet

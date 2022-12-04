@@ -1,53 +1,73 @@
-"Tecla líder
+"Leader
 let mapleader = " "
 
-"espacios o saltos de linea en el M.N
-nnoremap ss i<Space><Esc>
-nnoremap aa o<Esc>
-nnoremap aA i<CR><Esc>
-
-"salir de M.I
+"Salir del M.I
 imap jj <Esc>
 imap jk <Esc>
-imap <C-c> <Esc>
 
-"Guardar o salir
+"Guarda y/o salir
 nmap <Leader>w :w<CR>
 nmap <Leader>qq :q<CR>
 nmap <Leader>qa :qall<CR>
 
-"corrector ortográfico
-nnoremap <F2> :setlocal spell! spelllang=es<CR>
-nnoremap <F4> :setlocal spell! spelllang=en<CR>
+"Saltos de linea o espacios en M.N
+nnoremap Ss i<Space><Esc>
+nnoremap Aa o<Esc>
+nnoremap AA i<CR><Esc>
 
-"Tamaño de las ventanas
-nnoremap <Leader><LEFT> 15<C-w><
-nnoremap <Leader><RIGHT> 15<C-w>>
+
+"Desmarcar palabra buscada
+nnoremap // :noh<return><Esc>
+nnoremap <Esc> :noh<return><Esc>
+
+"Tabs
+map <Leader>h :tabprevious<CR>
+map <Leader>l :tabnext<CR>
+map <Leader>ct :tabclose<CR>
+
+"Cerrar buffers
+map <Leader>bd :bd<CR>
+"Cerrar todos los buffers menos el actual
+command CloseAllBuffers silent! execute "%bd|e#|bd#"
+nnoremap <Leader>cab :CloseAllBuffers<CR>
+
+"Corrector ortografico
+nnoremap <Leader>Les :setlocal spell! spelllang=es<CR>
+nnoremap <Leader>Len :setlocal spell! spelllang=en<CR>
+
+"Tamaño de divisiones
+nnoremap <Leader><LEFT> 15<C-w>>
+nnoremap <Leader><RIGHT> 15<C-w><
 nnoremap <Leader><UP> 5<C-w>+
 nnoremap <Leader><DOWN> 5<C-w>-
 
-"pestañas
-map <Leader>h :tabprevious<CR>
-map <Leader>l :tabnext<CR>
-nnoremap <Leader>ct :tabclose<CR>
+"Navegar entre buffers
+nnoremap <TAB> :bnext<CR>
+nnoremap <S-TAB> :bprevious<CR>
 
-"Desmarcar palabras buscadas
-nnoremap <Esc><Esc> :noh<return><Esc>
-
-"scroll
+"Scroll
 nnoremap <C-c> 10<C-e>
 nnoremap <C-d> 10<C-y>
 
-"eliminar todos los buffers menos el actual
-command! CloseAllBuffers silent! execute "%bd|e#|bd#"
-nnoremap <leader>cab :CloseAllBuffers<CR>
+"Replace method
+nmap <Leader>ñ :s/<C-r><C-w>/X/gc
 
-"mejor tabulado
+"Mejorar el tabulado
 vnoremap < <gv
 vnoremap > >gv
 
-"open file in a new tab
-noremap gF <C-w>gf
+"Abrir en una nueva ventana
+nnoremap gF <C-w>gf
 
-"terminal
-nnoremap <F12> :sp<bar>term<cr><c-w>J:resize15<cr>
+
+"Cambiar nombre a un archivo
+function! RenameFile()
+  let old_name = expand('%')
+  let new_name = input('New file name: ', expand('%'), 'file')
+  if new_name != '' && new_name != old_name
+      exec ':saveas ' . new_name
+      exec ':silent !rm ' .old_name
+      redraw!
+  endif
+endfunction
+nmap <Leader>Rf :call RenameFile()<CR>

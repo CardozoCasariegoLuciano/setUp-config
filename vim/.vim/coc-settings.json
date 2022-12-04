@@ -10,6 +10,7 @@
   "emmet.showExpandedAbbreviation": "always",
   "emmet.syntaxProfiles": {"php":"html", "blade":"html"},
   "emmet.includeLanguages": { "javascript": "javascriptreact", "typescript": "typescriptreact", "php": "html", "blade": "html" },
+  "tsserver.trace.server": "verbose",
 
 
   //Python
@@ -21,7 +22,6 @@
     "reportMissingImports": "none"
   },
 
-
   //PHP
   "intelephense.diagnostics.undefinedTypes": false,
   "intelephense.diagnostics.undefinedFunctions": false,
@@ -30,4 +30,12 @@
   "intelephense.diagnostics.undefinedMethods": false,
   "intelephense.diagnostics.undefinedProperties": false,
   "intelephense.diagnostics.undefinedVariables": false,
+
+  //Java
+  "java.format.enabled": true,
+  "java.format.onType.enabled": true,
+  "java.format.settings.url": "/home/luciano/.config/coc/extensions/node_modules/redhat.java/eclipse-formatter.xml",
+  "coc.preferences.formatOnSaveFiletypes": [
+    "java"
+  ]
 }
