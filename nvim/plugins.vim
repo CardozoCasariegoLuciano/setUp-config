@@ -25,6 +25,8 @@ Plug 'alvan/vim-closetag'
 Plug 'neoclide/coc.nvim', {'branch':'release'}
 let g:coc_global_extensions = ['coc-snippets', 'coc-emmet', 'coc-prettier', 'coc-pairs', 'coc-html', 'coc-tsserver', 'coc-json', 'coc-css', 'coc-java' , 'coc-angular']
 Plug 'sirver/ultisnips'
+"Plug 'mlaursen/vim-react-snippets'
+
 Plug 'honza/vim-snippets'
 
 "Navigation

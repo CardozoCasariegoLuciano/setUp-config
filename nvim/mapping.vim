@@ -50,7 +50,7 @@ nnoremap <C-c> 10<C-e>
 nnoremap <C-d> 10<C-y>
 
 "Replace method
-nmap <Leader>ñ :s/<C-r><C-w>/X/gc
+nmap <Leader>ñ :%s/<C-r><C-w>/<C-r><C-w>/gc
 
 "Mejorar el tabulado
 vnoremap < <gv

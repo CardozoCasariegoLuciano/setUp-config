@@ -5,7 +5,7 @@
 "oceanicNext
 "palenight
 set termguicolors  " Activa true colors en la terminal
-colorscheme OceanicNext  " Activa tema onedark
+colorscheme onedark  " Activa tema onedark
 
 "AirLine Themes
 "let g:airline_theme='deus'
