@@ -2,8 +2,10 @@
 let g:NERDTreeChDirMode = 2  " Cambia el directorio actual al nodo padre actual
 let NERDTreeQuitOnOpen=1
 map <Leader>nt :NERDTreeToggle<CR>
+
 "Abrir el nerdTree existente (si lo hay)
 autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
+
 
 "AirLine
 let g:airline#extensions#tabline#enabled = 1  " Mostrar buffers abiertos (como pestañas)
@@ -19,11 +21,16 @@ let g:indentLine_bufNameExclude = ['NERD_tree.*', 'term:.*']
 "Coc
 so ~/.config/nvim/coc_pluggin.vim
 
+
 "Coc- formater
   autocmd BufNewFile,BufRead *.js,*.ts,*.tsx,*.jsx,*.css,*scss,*.html  call FormatJSFile()
   function FormatJSFile()
     nmap <Leader>p :CocCommand prettier.formatFile<CR>
   endfunction
+
+  au FileType go nmap <leader>p <Plug>(go-fmt)
+  "nmap <Leader>p :CocCommand editor.action.formatDocument<CR>
+
 
 "Ultisnips
 let g:UltiSnipsExpandTrigger="<F5>"

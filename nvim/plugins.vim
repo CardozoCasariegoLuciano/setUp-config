@@ -26,6 +26,7 @@ Plug 'neoclide/coc.nvim', {'branch':'release'}
 let g:coc_global_extensions = ['coc-snippets', 'coc-emmet', 'coc-prettier', 'coc-pairs', 'coc-html', 'coc-tsserver', 'coc-json', 'coc-css', 'coc-java' , 'coc-angular']
 Plug 'sirver/ultisnips'
 "Plug 'mlaursen/vim-react-snippets'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 Plug 'honza/vim-snippets'
 
@@ -33,6 +34,7 @@ Plug 'honza/vim-snippets'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'PhilRunninger/nerdtree-visual-selection'
 
 "Others
 Plug 'tpope/vim-eunuch' "Comandos de linux
