@@ -2,6 +2,7 @@
 let g:NERDTreeChDirMode = 2  " Cambia el directorio actual al nodo padre actual
 let NERDTreeQuitOnOpen=1
 map <Leader>nt :NERDTreeToggle<CR>
+map <leader>nf :NERDTreeFind<cr>
 
 "Abrir el nerdTree existente (si lo hay)
 autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
@@ -69,7 +70,7 @@ nmap <Leader>s <Plug>(easymotion-s2)
 let g:EasyMotion_smartcase=1
 
 "vim-which-key
-nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
+nnoremap <silent> <leader>' :WhichKey '<Space>'<CR>
 
 "Goyo
 nmap <Leader>g :Goyo<CR>
@@ -82,3 +83,6 @@ set signcolumn=yes
 nmap <Leader>Hp <Plug>(GitGutterPreviewHunk)
 nmap <Leader>Hs <Plug>(GitGutterStageHunk)
 nmap <Leader>Hu <Plug>(GitGutterUndoHunk)
+
+"Git blame
+nnoremap <Leader>B :<C-u>call gitblame#echo()<CR>

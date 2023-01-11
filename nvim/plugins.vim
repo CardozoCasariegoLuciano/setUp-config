@@ -43,12 +43,16 @@ Plug 'tpope/vim-eunuch' "Comandos de linux
 Plug 'junegunn/fzf'   
 Plug 'junegunn/fzf.vim'  
 Plug 'easymotion/vim-easymotion'
-Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-fugitive'
 Plug 'preservim/nerdcommenter'
 Plug 'dense-analysis/ale'  
 Plug 'ap/vim-css-color'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+
+"Git
+Plug 'zivyangll/git-blame.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'homogulosus/vim-diff'
 
 "others
 Plug 'neoclide/jsonc.vim'
