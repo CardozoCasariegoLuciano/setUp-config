@@ -5,7 +5,7 @@ map <Leader>nt :NERDTreeToggle<CR>
 map <leader>nf :NERDTreeFind<cr>
 
 "Abrir el nerdTree existente (si lo hay)
-autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
+autocmd BufWinEnter * if getcmdwintype() == '' && &buftype != 'quickfix' | silent! NERDTreeMirror | endif
 
 
 "AirLine
