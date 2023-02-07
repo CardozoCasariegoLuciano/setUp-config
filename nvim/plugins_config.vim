@@ -30,7 +30,7 @@ so ~/.config/nvim/coc_pluggin.vim
   endfunction
 
   au FileType go nmap <leader>p <Plug>(go-fmt)
-  "nmap <Leader>p :CocCommand editor.action.formatDocument<CR>
+  au FileType java nmap <leader>p :CocCommand editor.action.formatDocument<CR>
 
 
 "Ultisnips
@@ -86,3 +86,11 @@ nmap <Leader>Hu <Plug>(GitGutterUndoHunk)
 
 "Git blame
 nnoremap <Leader>B :<C-u>call gitblame#echo()<CR>
+
+"Vim-go config
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_operators = 1

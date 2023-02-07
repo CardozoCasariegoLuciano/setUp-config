@@ -45,3 +45,4 @@ so ~/.config/nvim/plugins.vim
 so ~/.config/nvim/plugins_config.vim
 so ~/.config/nvim/themes.vim
 
+set background=dark

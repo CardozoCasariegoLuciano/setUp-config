@@ -5,6 +5,7 @@
 "oceanicNext
 "palenight
 set termguicolors  " Activa true colors en la terminal
+set background=dark
 colorscheme onedark  " Activa tema onedark
 
 "AirLine Themes
