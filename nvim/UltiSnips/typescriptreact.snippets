@@ -1,13 +1,11 @@
-snippet adp "Añadir un puntero para acceder con ,, "
-<++>
-endsnippet
-
-snippet ncm "New basic react structure" b
-
-const ${1:ComponentName} = () =>{
-
-return( <h1>$1</h1> )
+snippet nrc "New basic react structure" b
+type `!p snip.rv = snip.basename`PropType ={
 }
 
-export default $1
+const `!p snip.rv = snip.basename` = ({}:`!p snip.rv = snip.basename`PropType ) =>{
+
+return( <h1>`!p snip.rv = snip.basename`</h1> )
+}
+
+export default `!p snip.rv = snip.basename`
 endsnippet

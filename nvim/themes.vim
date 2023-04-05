@@ -1,15 +1,21 @@
 "Themes
 
 "Otros temas:
+"onedark
 "nord
 "oceanicNext
 "palenight
+"aton-dark
+"purify
+"dracula
+
 set termguicolors  " Activa true colors en la terminal
 set background=dark
-colorscheme onedark  " Activa tema onedark
+colorscheme palenight  
 
 "AirLine Themes
-"let g:airline_theme='deus'
-"let g:airline_theme='tomorrow'
-"let g:airline_theme=' solarized_flood '
-let g:airline_theme= 'base16-spacemacs'
+let g:airline_theme='luna'
+"let g:airline_theme='base16_vim'
+"let g:airline_theme='base16_classic_dark'
+"let g:airline_theme='Kolor'
+

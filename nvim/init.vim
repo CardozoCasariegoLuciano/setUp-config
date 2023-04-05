@@ -30,6 +30,7 @@ set foldlevel=99
 set foldmethod=indent
 set showmatch
 set showcmd
+set nowrap
 
 filetype on
 filetype plugin on

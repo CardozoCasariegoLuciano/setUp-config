@@ -74,8 +74,35 @@ nnoremap <silent> <leader>' :WhichKey '<Space>'<CR>
 
 "Goyo
 nmap <Leader>g :Goyo<CR>
-let g:goyo_width=100
-let g:goyo_height=100
+let g:goyo_width = '80%'    " Establece el ancho de la ventana a un 80% del tamaño de la pantalla
+let g:goyo_height = '80%'   " Establece la altura de la ventana a un 80% del tamaño de la pantalla
+
+function! s:goyo_enter()
+  if executable('tmux') && strlen($TMUX)
+    silent !tmux set status off
+    silent !tmux list-panes -F '\#F' | grep -q Z || tmux resize-pane -Z
+  endif
+  set showcmd
+  set scrolloff=5
+  set  nu rnu
+  set winwidth=400
+  colorscheme nord  
+endfunction
+
+function! s:goyo_leave()
+  if executable('tmux') && strlen($TMUX)
+    silent !tmux set status on
+    silent !tmux list-panes -F '\#F' | grep -q Z && tmux resize-pane -Z
+  endif
+  set showcmd
+  set scrolloff=5
+  set winwidth=40
+  colorscheme palenight  
+endfunction
+
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
+autocmd! User GoyoLeave nested call <SID>goyo_leave()
+
 
 
 "GitGutter
@@ -92,5 +119,33 @@ let g:go_highlight_types = 1
 let g:go_highlight_fields = 1
 let g:go_highlight_functions = 1
 let g:go_highlight_function_calls = 1
+let g:go_highlight_function_parameters = 1
 let g:go_highlight_extra_types = 1
 let g:go_highlight_operators = 1
+let g:go_highlight_variable_declarations = 1
+let g:go_highlight_variable_assignments = 1
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_generate_tags = 1
+let g:go_highlight_chan_whitespace_error = 1
+let g:go_highlight_array_whitespace_error = 1
+
+
+"Minimap
+nmap <Leader>Mi :MinimapToggle<CR>:MinimapUpdateHighlight<CR>:MinimapRescan<CR>:MinimapRefresh<CR>
+
+let g:minimap_width = 15
+let g:minimap_git_colors = 1
+let g:minimap_highlight_search = 1
+
+
+"HTTP plugin
+let g:vim_http_split_vertically = 1
+let g:vim_http_tempbuffer = 1
+
+
+"Lens (rezise windows)
+let g:lens#height_resize_max = 20
+let g:lens#height_resize_min = 5
+
+let g:lens#width_resize_max = 80
+let g:lens#width_resize_min = 10

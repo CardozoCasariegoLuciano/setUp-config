@@ -2,6 +2,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 "syntax
 Plug 'sheerun/vim-polyglot'
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
 "Visual
 Plug 'yggdroot/indentLine'
@@ -16,10 +17,14 @@ Plug 'chriskempson/base16-vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'mhartington/oceanic-next'
 Plug 'drewtempelmeyer/palenight.vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'kyoz/purify', { 'rtp': 'vim' }
+Plug 'gosukiwi/vim-atom-dark'
 
 "Typing
 Plug 'tpope/vim-surround'
 Plug 'alvan/vim-closetag'
+Plug 'AndrewRadev/tagalong.vim'
 
 "AutoComplete
 Plug 'neoclide/coc.nvim', {'branch':'release'}
@@ -35,9 +40,14 @@ Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'PhilRunninger/nerdtree-visual-selection'
+Plug 'wfxr/minimap.vim'
 
 "Others
 Plug 'tpope/vim-eunuch' "Comandos de linux
+Plug 'nicwest/vim-http'
+Plug 'camspiers/lens.vim'
+Plug 'camspiers/animate.vim'
+Plug 'MattesGroeger/vim-bookmarks'
 
 "IDE
 Plug 'junegunn/fzf'   
@@ -46,7 +56,9 @@ Plug 'easymotion/vim-easymotion'
 Plug 'preservim/nerdcommenter'
 Plug 'dense-analysis/ale'  
 Plug 'ap/vim-css-color'
+Plug 'KabbAmine/vCoolor.vim'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+Plug 'AndrewRadev/splitjoin.vim'
 
 "Git
 Plug 'zivyangll/git-blame.vim'
