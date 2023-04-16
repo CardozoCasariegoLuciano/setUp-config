@@ -32,7 +32,6 @@ let g:coc_global_extensions = ['coc-snippets', 'coc-emmet', 'coc-prettier', 'coc
 Plug 'sirver/ultisnips'
 "Plug 'mlaursen/vim-react-snippets'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-
 Plug 'honza/vim-snippets'
 
 "Navigation
@@ -45,9 +44,8 @@ Plug 'wfxr/minimap.vim'
 "Others
 Plug 'tpope/vim-eunuch' "Comandos de linux
 Plug 'nicwest/vim-http'
-Plug 'camspiers/lens.vim'
-Plug 'camspiers/animate.vim'
 Plug 'MattesGroeger/vim-bookmarks'
+Plug 'vim-test/vim-test'
 
 "IDE
 Plug 'junegunn/fzf'   

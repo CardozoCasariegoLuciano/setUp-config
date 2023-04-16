@@ -5,7 +5,7 @@ map <Leader>nt :NERDTreeToggle<CR>
 map <leader>nf :NERDTreeFind<cr>
 
 "Abrir el nerdTree existente (si lo hay)
-autocmd BufWinEnter * if getcmdwintype() == '' && &buftype != 'quickfix' | silent! NERDTreeMirror | endif
+"autocmd BufWinEnter * if getcmdwintype() == '' && &buftype != 'quickfix' | silent! NERDTreeMirror | endif
 
 
 "AirLine
@@ -112,7 +112,7 @@ nmap <Leader>Hs <Plug>(GitGutterStageHunk)
 nmap <Leader>Hu <Plug>(GitGutterUndoHunk)
 
 "Git blame
-nnoremap <Leader>B :<C-u>call gitblame#echo()<CR>
+nnoremap <Leader>Bl :<C-u>call gitblame#echo()<CR>
 
 "Vim-go config
 let g:go_highlight_types = 1
@@ -131,7 +131,7 @@ let g:go_highlight_array_whitespace_error = 1
 
 
 "Minimap
-nmap <Leader>Mi :MinimapToggle<CR>:MinimapUpdateHighlight<CR>:MinimapRescan<CR>:MinimapRefresh<CR>
+nmap <Leader>Mp :MinimapToggle<CR>:MinimapUpdateHighlight<CR>:MinimapRescan<CR>:MinimapRefresh<CR>
 
 let g:minimap_width = 15
 let g:minimap_git_colors = 1
@@ -143,9 +143,20 @@ let g:vim_http_split_vertically = 1
 let g:vim_http_tempbuffer = 1
 
 
-"Lens (rezise windows)
-let g:lens#height_resize_max = 20
-let g:lens#height_resize_min = 5
+"Vim test
+nmap <silent> <leader>rt :TestNearest<CR>
+nmap <silent> <leader>rT :TestFile<CR>
+nmap <silent> <leader>ra :TestSuite<CR>
+nmap <silent> <leader>rl :TestLast<CR>
+nmap <silent> <leader>rg :TestVisit<CR>
 
-let g:lens#width_resize_max = 80
-let g:lens#width_resize_min = 10
+"BookMarks
+let g:bookmark_no_default_key_mappings = 1
+
+nmap <Leader>bt <Plug>BookmarkToggle
+nmap <Leader>bn <Plug>BookmarkAnnotate
+nmap <Leader>ba <Plug>BookmarkShowAll
+nmap <Leader>bj <Plug>BookmarkNext
+nmap <Leader>bk <Plug>BookmarkPrev
+nmap <Leader>bc <Plug>BookmarkClear
+nmap <Leader>bx <Plug>BookmarkClearAll
