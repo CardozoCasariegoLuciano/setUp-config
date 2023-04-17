@@ -36,10 +36,12 @@ filetype on
 filetype plugin on
 filetype plugin indent on
 filetype indent on
-	
+
+
 autocmd Bufenter * set fo-=c fo-=r fo-=o "para que la siguiente linea no se comente si la anterior lo esta
 "autocmd BufWinLeave ?* mkview
 "autocmd BufWinEnter ?* silent loadview
+autocmd BufWritePre * :%s/\s\+$//e "Al guardar borra los espacios de mas al final de las lineas
 
 so ~/.config/nvim/mapping.vim
 so ~/.config/nvim/plugins.vim
