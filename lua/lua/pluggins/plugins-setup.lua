@@ -17,10 +17,8 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   -- My plugins here
 
-  --Theme
+  --Themes
   use "folke/tokyonight.nvim"
-  vim.cmd[[ set background=dark ]]
-  vim.cmd[[ colorscheme tokyonight ]]
 
   --Navigation
   use "nvim-tree/nvim-tree.lua"

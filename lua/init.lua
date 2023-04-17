@@ -4,5 +4,5 @@ require("config/settings")
 require("pluggins/plugins-setup")
 require("pluggins/plugins")
 
---require("theme/theme")
+require("theme/")
 
