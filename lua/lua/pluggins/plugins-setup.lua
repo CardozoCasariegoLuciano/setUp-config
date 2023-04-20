@@ -15,22 +15,41 @@ local packer_bootstrap = ensure_packer()
 --Carga de plugins
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
+
   -- My plugins here
 
   --Themes
   use "folke/tokyonight.nvim"
 
+ -- lua-line theme
+  use "nvim-lualine/lualine.nvim"
+
   --Navigation
   use "nvim-tree/nvim-tree.lua"
   use "nvim-tree/nvim-web-devicons"
-  use "nvim-treesitter/nvim-treesitter"
   use "christoomey/vim-tmux-navigator"
 
+  --treesitter
+  use "nvim-treesitter/nvim-treesitter"
+
+  --Telescope
   use {
     'nvim-telescope/telescope.nvim',
     tag = '0.1.1',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
+
+--LSP languajes server protocol
+	use({
+		"williamboman/mason.nvim",
+		"williamboman/mason-lspconfig.nvim",
+		"neovim/nvim-lspconfig",
+		"WhoIsSethDaniel/mason-tool-installer.nvim",
+	})
+
+  -- autopairs
+  use "windwp/nvim-autopairs"
+  use "windwp/nvim-ts-autotag"
 
 
   -- Put this at the end after all plugins

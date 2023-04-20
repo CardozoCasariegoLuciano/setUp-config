@@ -1,6 +1,9 @@
-local key = vim.keymap -- for keymaps
+local ok, builtin = pcall(require, 'telescope.builtin')
+if not ok then
+  return
+end
 
-local builtin = require('telescope.builtin')
+local key = vim.keymap -- for keymaps
 
 --Find Files
 key.set('n', '<leader>ff', builtin.find_files, {}) --Find file by name
@@ -23,9 +26,15 @@ key.set('n', '<leader>fgc', builtin.git_commits, {}) --Show all the commits
 key.set('n', '<leader>fgs', builtin.git_status, {}) --Show the status
 key.set('n', '<leader>fgt', builtin.git_stash, {}) --Show the status
 
+--LSP
+key.set('n', '<leader>gr', builtin.lsp_references, {})
+key.set('n', '<leader>ds', builtin.lsp_document_symbols, {})
+key.set('n', '<leader>dws', builtin.lsp_dynamic_workspace_symbols, {})
+key.set('n', '<leader>fd', builtin.diagnostics, {})
+key.set('n', '<leader>gi', builtin.lsp_implementations, {})
+key.set('n', '<leader>gd', builtin.lsp_definitions, {})
+key.set('n', '<leader>td', builtin.lsp_type_definitions, {})
 
 
--- Con esto tengo por ahora, pero para segir aca tengo la data
+--Documentacion
 -- https://github.com/nvim-telescope/telescope.nvim
--- y en el de abajo hay ejemplos de cada uno
--- https://github.com/nvim-telescope/telescope.nvim/wiki/Showcase

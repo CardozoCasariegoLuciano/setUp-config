@@ -1,3 +1,9 @@
+local ok, NvimTree = pcall(require, "nvim-tree")
+if not ok then
+  return
+end
+
+
 local key = vim.keymap -- for keymaps
 
 -- disable netrw at the very start of your init.lua (strongly advised)
@@ -8,7 +14,7 @@ vim.g.loaded_netrwPlugin = 1
 vim.opt.termguicolors = true
 
 -- empty setup using defaults
-require("nvim-tree").setup()
+NvimTree.setup()
 
 --keymapping
 key.set('n', '<Leader>nt', ':NvimTreeToggle<CR>', {noremap = true})

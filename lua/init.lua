@@ -5,4 +5,3 @@ require("pluggins/plugins-setup")
 require("pluggins/plugins")
 
 require("theme/")
-
