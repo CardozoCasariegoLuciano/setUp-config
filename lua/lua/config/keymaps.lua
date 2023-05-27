@@ -8,7 +8,6 @@ local cmd = vim.cmd -- for VimScript commands
 local key = vim.keymap -- for keymaps
 local api = vim.api -- API VIM
 
-
 --Leader
 g.mapleader = ' ' -- tecla lider, en este caso el espacio
 

@@ -33,7 +33,7 @@ inoremap <silent><expr> <A-j>
 inoremap <expr><A-k> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 inoremap <silent><expr> <c-space> coc#refresh()
 
-"El autocomplete que trar CoC 
+"El autocomplete que trar CoC
 " Use tab for trigger completion with characters ahead and navigate
 " NOTE: There's always complete item selected by default, you may want to enable
 " no select by `"suggest.noselect": true` in your configuration file
@@ -75,8 +75,8 @@ endif
 
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
+nmap <silent> <Leader>en <Plug>(coc-diagnostic-prev)
+nmap <silent> <Leader>ep <Plug>(coc-diagnostic-next)
 
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
@@ -104,8 +104,8 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 nmap <leader>rn <Plug>(coc-rename)
 
 " Formatting selected code.
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
+xmap <leader>p  <Plug>(coc-format-selected)
+nmap <leader>p  <Plug>(coc-format-selected)
 
 augroup mygroup
   autocmd!
@@ -153,7 +153,7 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Mappings for CoCList
 " Show all diagnostics.
-nnoremap <silent><nowait> <Leader>Cd  :<C-u>CocList diagnostics<cr>
+nnoremap <silent><nowait> <Leader>Cd  :CocDiagnostics<cr>
 " Manage extensions.
 nnoremap <silent><nowait> <Leader>Ce  :<C-u>CocList extensions<cr>
 " Show commands.

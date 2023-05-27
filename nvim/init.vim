@@ -45,7 +45,7 @@ autocmd BufWritePre * :%s/\s\+$//e "Al guardar borra los espacios de mas al fina
 
 so ~/.config/nvim/mapping.vim
 so ~/.config/nvim/plugins.vim
-so ~/.config/nvim/plugins_config.vim
+so ~/.config/nvim/Plugins/init.vim
 so ~/.config/nvim/themes.vim
 
 set background=dark

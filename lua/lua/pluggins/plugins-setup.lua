@@ -45,15 +45,32 @@ return require('packer').startup(function(use)
 		"williamboman/mason-lspconfig.nvim",
 		"neovim/nvim-lspconfig",
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
+    "onsails/lspkind.nvim"
 	})
 
   -- autopairs
   use "windwp/nvim-autopairs"
   use "windwp/nvim-ts-autotag"
 
+  -- completions
+  use "hrsh7th/nvim-cmp"
+  use "hrsh7th/cmp-buffer"
+  use "hrsh7th/cmp-path"
+  use "hrsh7th/cmp-nvim-lsp"
 
-  -- Put this at the end after all plugins
+  -- snippets
+  use "L3MON4D3/LuaSnip"
+  use "rafamadriz/friendly-snippets"
+  use "saadparwaiz1/cmp_luasnip"
+
+  use({
+    'weilbith/nvim-code-action-menu',
+    cmd = 'CodeActionMenu',
+  })
+
+
   if packer_bootstrap then
+  -- Put this at the end after all plugins
     require('packer').sync()
   end
 end)

@@ -5,11 +5,14 @@ Plug 'sheerun/vim-polyglot'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
 "Visual
-Plug 'yggdroot/indentLine'
+Plug 'lukas-reineke/indent-blankline.nvim'
 
 "Status bar
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'nvim-lualine/lualine.nvim'
+Plug 'nvim-tree/nvim-web-devicons'
+"Plug 'kdheepak/tabline.nvim'
+Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
+
 
 "Themes
 Plug 'joshdick/onedark.vim'
@@ -46,13 +49,16 @@ Plug 'tpope/vim-eunuch' "Comandos de linux
 Plug 'nicwest/vim-http'
 Plug 'MattesGroeger/vim-bookmarks'
 Plug 'vim-test/vim-test'
+Plug 'jghauser/mkdir.nvim'
+Plug 'ThePrimeagen/harpoon'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 
-"IDE
-Plug 'junegunn/fzf'   
-Plug 'junegunn/fzf.vim'  
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' }
+
 Plug 'easymotion/vim-easymotion'
 Plug 'preservim/nerdcommenter'
-Plug 'dense-analysis/ale'  
+Plug 'dense-analysis/ale'
 Plug 'ap/vim-css-color'
 Plug 'KabbAmine/vCoolor.vim'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
@@ -69,5 +75,11 @@ Plug 'neoclide/jsonc.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'liuchengxu/vim-which-key'
 Plug 'mhinz/vim-startify'
+Plug 'google/vim-maktaba'
+Plug 'google/vim-codefmt'
 
 call plug#end()
+
+lua << EOF
+require("bufferline").setup{}
+EOF

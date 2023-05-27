@@ -67,8 +67,24 @@ vnoremap > >gv
 "Abrir en una nueva ventana
 nnoremap gF <C-w>gf
 
+"Center de screnn when go netx finded
+nnoremap n nzzzv
+nnoremap N Nzzzv
 
-"Cambiar nombre a un archivo
+"join lines focus
+nnoremap J mzJ`z
+
+"quick env file edit"
+nnoremap <leader>ee :vsp .env<CR>
+
+"quick open nvim config
+nnoremap <leader>ec :vsp ~/.config/nvim/<CR>
+
+"Vim diagnostics"
+nnoremap <leader>en <cmd>lua vim.diagnostic.goto_next<CR>
+nnoremap <leader>ep <cmd>lua vim.diagnostic.goto_prev<CR>
+
+"Cambiar nombre a un archivo"
 function! RenameFile()
   let old_name = expand('%')
   let new_name = input('New file name: ', expand('%'), 'file')
@@ -79,3 +95,20 @@ function! RenameFile()
   endif
 endfunction
 nmap <Leader>Rf :call RenameFile()<CR>
+
+"RUN JAVA
+autocmd FileType java nnoremap <buffer> <F9> :!javac -d ./build/ %<CR>
+autocmd FileType java nnoremap <buffer> <F10> :!java %<CR>
+
+
+"symbols to add undo points
+lua << END
+  local symbols = { ",", ".", "!", "?", "$", ">", "<" }
+  for _, symbol in pairs(symbols) do
+    vim.keymap.set("i", symbol, symbol .. "<c-g>u")
+  end
+
+  vim.diagnostic.config({
+    virtual_text = false,
+  })
+END
