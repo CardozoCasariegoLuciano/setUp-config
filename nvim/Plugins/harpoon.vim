@@ -4,6 +4,6 @@ nmap <Leader>mn <CMD>lua require("harpoon.ui").nav_next()<CR>
 nmap <Leader>mp <CMD>lua require("harpoon.ui").nav_prev()<CR>
 
 lua << END
-  require('harpoon.mark').add_file()
+  --require('harpoon.mark').add_file()
 END
 

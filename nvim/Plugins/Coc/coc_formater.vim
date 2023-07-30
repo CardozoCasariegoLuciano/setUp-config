@@ -7,3 +7,4 @@
   au FileType go nmap <leader>p <Plug>(go-fmt)
   au FileType java nmap <leader>p :CocCommand editor.action.formatDocument<CR>
 
+  nmap <leader>p :FormatCode<CR>

@@ -80,9 +80,16 @@ nnoremap <leader>ee :vsp .env<CR>
 "quick open nvim config
 nnoremap <leader>ec :vsp ~/.config/nvim/<CR>
 
-"Vim diagnostics"
+"Vim diagnostics
 nnoremap <leader>en <cmd>lua vim.diagnostic.goto_next<CR>
 nnoremap <leader>ep <cmd>lua vim.diagnostic.goto_prev<CR>
+
+" reselect pasted text
+nnoremap gp `[v`]
+
+"Run Java project
+nnoremap <F5> :!javac -d ../build/ % && cd ../build && java %:r<CR>
+
 
 "Cambiar nombre a un archivo"
 function! RenameFile()

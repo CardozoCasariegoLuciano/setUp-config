@@ -1,5 +1,7 @@
 syntax enable
 
+set splitbelow
+set splitright
 set nocompatible
 set encoding=utf-8
 set nu rnu
@@ -17,11 +19,7 @@ set ignorecase smartcase
 set noshowmode
 set mouse=a
 set pumheight=10
-set splitbelow
-set splitright
 set showtabline=2
-set splitbelow
-set splitright
 set showtabline=2
 set clipboard=unnamedplus
 set foldcolumn=2
@@ -49,3 +47,12 @@ so ~/.config/nvim/Plugins/init.vim
 so ~/.config/nvim/themes.vim
 
 set background=dark
+
+
+"Resaltar lineas
+" define line highlight color
+highlight LineHighlight ctermbg=black guibg=black
+" highlight the current line
+nnoremap <silent> <Leader>Hn :call matchadd('LineHighlight', '\%'.line('.').'l')<CR>
+" clear all the highlighted lines
+nnoremap <silent> <Leader>Hc :call clearmatches()<CR>

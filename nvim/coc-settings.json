@@ -4,14 +4,16 @@
 //"typescript.referencesCodeLens.enable": true,
 //"javascript.referencesCodeLens.enable": true,
 "javascript.suggestionActions.enabled": false,
-"javascript.suggest.autoImports": true, 
+"javascript.suggest.autoImports": true,
 "typescript.suggest.autoImports": true,
 "diagnostic.displayByAle": true,
 "emmet.showExpandedAbbreviation": "always",
-"emmet.includeLanguages": { "javascript": "javascriptreact", "typescript": "typescriptreact", "php": "html", "blade": "html" },
+"emmet.includeLanguages": { "javascript": "javascriptreact", "typescript": "typescriptreact", "jsp": "html", "php": "html", "blade": "html" },
 "tsserver.trace.server": "verbose",
 "snippets.ultisnips.pythonPrompt": false,
 
 "java.project.outputPath": "output",
 "java.project.sourcePaths": ["src"],
+
+"prettier.requireConfig": true,
 }

@@ -8,10 +8,10 @@
             mode = "tabs", -- set to "tabs" to only show tabpages instead
             numbers = "ordinal",
             separator_style = "slope",
-            indicator = {
-                icon = '', -- this should be omitted if indicator style is not 'icon'
-                style = 'icon',
-            },
+            --indicator = {
+                --icon = '', -- this should be omitted if indicator style is not 'icon'
+                --style = 'icon',
+            --},
             diagnostics = "coc",
             diagnostics_indicator = function(count, level, diagnostics_dict, context)
                 return "("..count..")"

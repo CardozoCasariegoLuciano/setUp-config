@@ -1,5 +1,3 @@
-
-
 "Find Files
 nnoremap <leader>ff <cmd>Telescope find_files<cr>   "Find file by name
 nnoremap <leader>fif <cmd>Telescope current_buffer_fuzzy_find<cr>   "Find file by name "Find by word in the current buffer
