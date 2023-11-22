@@ -21,6 +21,7 @@ so ~/.config/nvim/Plugins/bufferline.lua
 so ~/.config/nvim/Plugins/mini.lua
 so ~/.config/nvim/Plugins/flote.lua
 so ~/.config/nvim/Plugins/openURL.vim
+so ~/.config/nvim/Plugins/jsdoc.vim
 so ~/.config/nvim/Plugins/zealvim.vim
 
 

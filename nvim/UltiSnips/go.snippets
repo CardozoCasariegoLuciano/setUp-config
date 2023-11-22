@@ -1,3 +1,64 @@
 snippet pr "Print" b
 fmt.Println($1)
 endsnippet
+
+snippet testF "prepare fully test template" b
+//Set mock and SUT
+
+func TestMain(m *testing.M) {
+	//Set mock and SUT
+
+	// Prepare mock responces
+
+	code := m.Run()
+	os.Exit(code)
+}
+
+func Test$1(t *testing.T) {
+	testCases := []struct {
+		title                 string
+	}{
+		{
+			title:                 "test",
+		},
+	}
+
+	for i := range testCases {
+		tc := testCases[i]
+
+		t.Run(tc.title, func(t *testing.T) {
+			t.Parallel()
+			//Preapare test
+
+			//Call method under test
+
+			//Assertions
+		})
+	}
+}
+endsnippet
+
+snippet testC "prepare test template" b
+func Test$1(t *testing.T) {
+	testCases := []struct {
+		title                 string
+	}{
+		{
+			title:                 "test",
+		},
+	}
+
+	for i := range testCases {
+		tc := testCases[i]
+
+		t.Run(tc.title, func(t *testing.T) {
+			t.Parallel()
+			//Preapare test
+
+			//Call method under test
+
+			//Assertions
+		})
+	}
+}
+endsnippet

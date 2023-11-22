@@ -49,7 +49,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'PhilRunninger/nerdtree-visual-selection'
 Plug 'wfxr/minimap.vim' "<Leader>Mp
 Plug 'easymotion/vim-easymotion' "To navegate usgin 2 leters <Leader>s
-Plug 'MattesGroeger/vim-bookmarks' "Marcadores <Leader>ba
+Plug 'MattesGroeger/vim-bookmarks' "Marcadores <Leader>bt o <Leader>ba
 Plug 'ThePrimeagen/harpoon' "Save paths to easy access <Leader>ml
 
 "IDE
@@ -70,11 +70,16 @@ Plug 'mhinz/vim-startify' "whet just text nvim gets a dashboard
 Plug 'junegunn/goyo.vim' "Full size window <Leader>gg
 Plug 'JellyApple102/flote.nvim' "Notes in vim <Leader>nl for local or <Leader>ng for global notes
 Plug 'dhruvasagar/vim-open-url' "Para abrir direcciones en el navegador <Leader>gw1 y <Leader>gw2
-Plug 'KabbAmine/zeavim.vim' "Documentation <Leader>zz
 
 "Scroll and cursor Animations
 Plug 'echasnovski/mini.nvim'
 Plug 'echasnovski/mini.animate'
+
+"Doc Generator
+Plug 'heavenshell/vim-jsdoc', {
+  \ 'for': ['javascript', 'javascript.jsx','typescript'],
+  \ 'do': 'make install'
+\}
 
 "Git
 Plug 'zivyangll/git-blame.vim' " <Leader>Bl

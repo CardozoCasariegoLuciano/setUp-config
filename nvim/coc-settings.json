@@ -15,5 +15,5 @@
 "java.project.outputPath": "output",
 "java.project.sourcePaths": ["src"],
 
-"prettier.requireConfig": true,
+"prettier.requireConfig": false,
 }
