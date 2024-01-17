@@ -20,8 +20,6 @@ nnoremap <leader>fco <cmd>Telescope colorscheme<cr>
 nnoremap <leader>fm <cmd>Telescope marks<cr>
  "List all registers and its data
 nnoremap <leader>fr <cmd>Telescope registers<cr>
-"List all quickfix
-nnoremap <leader>fqf <cmd>Telescope quickfix<cr>
 "Show the keymappings
 nnoremap <leader>fk <cmd>Telescope keymaps<cr>
 
