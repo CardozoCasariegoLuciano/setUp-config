@@ -3,6 +3,7 @@ if not ok then
   return
 end
 
+---@diagnostic disable-next-line: undefined-global
 local key = vim.keymap -- for keymaps
 
 --Find Files

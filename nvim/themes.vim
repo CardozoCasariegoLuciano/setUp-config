@@ -11,4 +11,4 @@
 
 set termguicolors  " Activa true colors en la terminal
 set background=dark
-colorscheme palenight
+colorscheme tokyonight

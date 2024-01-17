@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 local ok, flote = pcall(require, 'flote')
     if not ok then
     return

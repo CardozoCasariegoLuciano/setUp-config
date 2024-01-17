@@ -1,2 +1,2 @@
-nmap <Leader>gw1 <Plug>(open-url-browser)<CR>
-nmap <Leader>gw2 <Plug>(open-url-search-google)<CR>
+nmap <Leader>wg <Plug>(open-url-browser)<CR>
+nmap <Leader>wG <Plug>(open-url-search-google)<CR>
