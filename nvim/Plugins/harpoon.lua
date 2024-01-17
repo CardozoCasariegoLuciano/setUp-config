@@ -1,5 +1,8 @@
 ---@diagnostic disable: undefined-global
-local harpoon = require("harpoon")
+local ok, harpoon = pcall(require, 'harpoon')
+    if not ok then
+    return
+end
 
 -- REQUIRED
 harpoon:setup()

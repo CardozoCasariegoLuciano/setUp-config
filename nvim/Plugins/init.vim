@@ -18,5 +18,6 @@ so ~/.config/nvim/Plugins/jsdoc.vim
 so ~/.config/nvim/Plugins/nvim-tree.lua
 so ~/.config/nvim/Plugins/git-sings.lua
 so ~/.config/nvim/Plugins/git-fugitive.lua
+so ~/.config/nvim/Plugins/treessiter.lua
 
 

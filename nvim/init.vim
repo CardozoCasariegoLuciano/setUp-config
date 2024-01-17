@@ -35,8 +35,6 @@ filetype plugin on
 filetype plugin indent on
 filetype indent on
 
-
-"Configurar Plugins de git
 "Configurar el treesitter
 
 autocmd Bufenter * set fo-=c fo-=r fo-=o "para que la siguiente linea no se comente si la anterior lo esta
