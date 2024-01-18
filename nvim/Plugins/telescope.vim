@@ -9,6 +9,9 @@ nnoremap <leader>ft <cmd>Telescope live_grep<cr>
 "List old files
 nnoremap <leader>fo <cmd>Telescope oldfiles<cr>
 
+"Find plugins
+nnoremap <leader>fp <cmd>lua require('telescope.builtin').find_files({cwd = "~/.config/nvim/Plugins"})<cr>
+
 "Vim or system features
 "Show all buffers
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
@@ -28,6 +31,8 @@ nnoremap <leader>fk <cmd>Telescope keymaps<cr>
 nnoremap <leader>fgb <cmd>Telescope git_branches<cr>
 "Show all commits
 nnoremap <leader>fgc <cmd>Telescope git_commits<cr>
+"Show commits of the current bufer
+nnoremap <leader>fgo <cmd>Telescope git_bcommits<cr>
 "Show the status
 nnoremap <leader>fgs <cmd>Telescope git_status<cr>
 "Show the stash area
