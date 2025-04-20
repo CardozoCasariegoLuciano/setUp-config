@@ -1,0 +1,18 @@
+En este archivo coy a documentar lo mejor que pueda todo lo que fue necesario para prepara el setup de Tmux, zsh y nvim
+
+Zsh:
+  Acutalmente Manjaro ya trae incorporado zsh y bastante bien, yo no tocaria nada mas que marcarlo como shell por defecto
+  con el comnado "chsh -s $(which zsh)" y luego reiniciando la PC
+
+Tmux:
+  Instalar tmux con "Sudo pacman -S tmux" y seguir los pasos tal cual el archivo .tmux.config de la carpeta tmux
+
+Nvim:
+  Instalar nvim con "Sudo pacman -S neovim"
+
+  Copiar la carpeta nvim en "~/.config/" eso ya trae todos los mapings y todos los plugins y themes, los cuales van a romper sin el sigueinte paso.
+    Si queres usar igualmente solo con los mappings anda al archivo init.vim y comenta (con comillas dobles) las importaciones de las lineas 46,47 y 48
+  Para que todo funcione correctamente tenes que hacer los siguientes pasos:
+
+  --Instalar el manejador de plugins
+
