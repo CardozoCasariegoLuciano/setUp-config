@@ -1,4 +1,4 @@
-En este archivo coy a documentar lo mejor que pueda todo lo que fue necesario para prepara el setup de Tmux, zsh y nvim
+En este archivo voy a documentar lo mejor que pueda todo lo que fue necesario para prepara el setup de Tmux, zsh y nvim
 
 Zsh:
   Acutalmente Manjaro ya trae incorporado zsh y bastante bien, yo no tocaria nada mas que marcarlo como shell por defecto
@@ -9,10 +9,34 @@ Tmux:
 
 Nvim:
   Instalar nvim con "Sudo pacman -S neovim"
+  Instalar xclip con "sudo pacman -S xclip" es una herrapienta para copiar y pegar dentro y fuera de nvim
 
-  Copiar la carpeta nvim en "~/.config/" eso ya trae todos los mapings y todos los plugins y themes, los cuales van a romper sin el sigueinte paso.
-    Si queres usar igualmente solo con los mappings anda al archivo init.vim y comenta (con comillas dobles) las importaciones de las lineas 46,47 y 48
-  Para que todo funcione correctamente tenes que hacer los siguientes pasos:
+  Para algunos plugis y LSP vas a requerir Node, mas al final explico como hacerlo con NVM
+  Para otros plugis (como telescope) va a hacer falta tener fd y ripgrep (Sudo pacman -S fd ripgrep)
 
-  --Instalar el manejador de plugins
+  Copiar la carpeta nvim en "~/.config/" eso ya trae todos los mapings y todos los plugins y themes. Como manejador de paquetes uso
+  Lazy, por lo que su propia instalacion y la de sus plugis es medio automatica y la primera vez que lo abras de va a instalar todo
+
+  Los LSP los manejo con Masor, una ves tenga toos los pligins instalados tengo que usar el comando :Masor para instalar los LSP de
+  los lenguajes que vaya a usar (esto me va a permitir la deteccion de errores, formateos, autocompletados, etc)
+
+
+
+  ======= instalar NVM ==========
+
+# Download and install nvm:
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.2/install.sh | bash
+
+# in lieu of restarting the shell
+\. "$HOME/.nvm/nvm.sh"
+
+# Download and install Node.js:
+nvm install 22
+
+# Verify the Node.js version:
+node -v # Should print "v22.15.0".
+nvm current # Should print "v22.15.0".
+
+# Verifica versión de npm:
+npm -v # Debería mostrar "10.9.2".
 
