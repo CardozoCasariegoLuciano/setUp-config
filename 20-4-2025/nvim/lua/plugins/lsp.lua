@@ -51,7 +51,7 @@ return {
             "vimls",
             "angularls",
             "pyright",
-            "hls"
+            "hls",
         }
         for _, server in ipairs(servers) do
             require("lspconfig")[server].setup({
