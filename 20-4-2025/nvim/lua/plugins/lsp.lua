@@ -33,9 +33,31 @@ return {
                 Lua = {
                     telemetry = { enable = false },
                     workspace = { checkThirdParty = false },
-                }
+                },
             }
         })
+
+        local servers = {
+            "marksman",
+            "bashls",
+            "cssls",
+            "cssmodules_ls",
+            "emmet_ls",
+            "eslint",
+            "gopls",
+            "html",
+            "jsonls",
+            "ts_ls",
+            "vimls",
+            "angularls",
+            "pyright",
+            "hls"
+        }
+        for _, server in ipairs(servers) do
+            require("lspconfig")[server].setup({
+                on_attach = on_attach,
+            })
+        end
     end
 
 }

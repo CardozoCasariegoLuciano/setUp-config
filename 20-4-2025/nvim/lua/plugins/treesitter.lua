@@ -23,6 +23,8 @@ return {
             "markdown_inline",
             "typescript",
             "regex",
+            "python",
+            "haskell",
             "vim",
             "yaml",
         },

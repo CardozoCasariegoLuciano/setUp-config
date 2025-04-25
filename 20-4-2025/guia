@@ -17,8 +17,16 @@ Nvim:
   Copiar la carpeta nvim en "~/.config/" eso ya trae todos los mapings y todos los plugins y themes. Como manejador de paquetes uso
   Lazy, por lo que su propia instalacion y la de sus plugis es medio automatica y la primera vez que lo abras de va a instalar todo
 
-  Los LSP los manejo con Masor, una ves tenga toos los pligins instalados tengo que usar el comando :Masor para instalar los LSP de
-  los lenguajes que vaya a usar (esto me va a permitir la deteccion de errores, formateos, autocompletados, etc)
+  Los LSP los manejo con Masor, una vez tenga toos los plugins instalados tengo que usar el comando :Masor para instalar los LSP de
+  los lenguajes que vaya a usar (esto me va a permitir la deteccion de errores, formateos, autocompletados, etc), luego de instalarlos
+  los tengo que activar en el archivo "lua/plugins/lsp.lua", casi al final hay una lista de todos los LSP ya precargados, si no esta el
+  que nesecitas lo podes agregar ahi
+
+  Nota: si abris un archivo que machee con un LSP de esa lista, pero no lo tenes instalado en Masor, te va a tirar un error, lo arreglas
+  facil instalandolo como en el parrafo anterior (tener en cuanta que hay LSP distintos)
+
+  Lista con los nombres de los LSP
+  https://github.com/williamboman/mason-lspconfig.nvim/blob/main/doc/server-mapping.md
 
 
   ======= instalar NVM ==========
