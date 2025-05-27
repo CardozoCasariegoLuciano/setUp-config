@@ -37,13 +37,33 @@ return {
             }
         })
 
+        require("lspconfig").eslint.setup({
+            settings = {
+                format = false, -- Desactiva el formateo de ESLint (¡clave!)
+                -- Ajustes para Flat Config (v3+)
+                experimental = {
+                    useFlatConfig = true -- Si usas eslint.config.mjs
+                },
+            },
+            on_attach = function(client, bufnr)
+                -- Atajo para corregir errores de ESLint (sin formatear)
+                vim.keymap.set("n", "<leader>P", "<cmd>EslintFixAll<cr>", {
+                    buffer = bufnr,
+                    desc = "Corregir errores ESLint"
+                })
+
+                -- Desactivar capacidades de formateo del LSP
+                client.server_capabilities.documentFormattingProvider = false
+                client.server_capabilities.documentRangeFormattingProvider = false
+            end
+        })
+
         local servers = {
             "marksman",
             "bashls",
             "cssls",
             "cssmodules_ls",
             "emmet_ls",
-            "eslint",
             "gopls",
             "html",
             "jsonls",

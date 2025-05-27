@@ -1,4 +1,5 @@
----@diagnostic disable: undefined-global
+---@diagnostic disable: undefined-global, undefined-field
+
 local ls = require("luasnip")
 local types = require("luasnip.util.types")
 
@@ -36,6 +37,8 @@ function M.setup()
             ls.change_choice(1)
         end
     end)
+
+    require("luasnip.loaders.from_snipmate").lazy_load()
 end
 
 return M
