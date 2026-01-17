@@ -28,6 +28,9 @@ Nvim:
   Lista con los nombres de los LSP
   https://github.com/williamboman/mason-lspconfig.nvim/blob/main/doc/server-mapping.md
 
+  En una de las ultimas vesiones cambio treesitter, ahora hace falta tener instalado el CLI: npm install tree-sitter-cli
+  y el compilador de C. Para saber si ya lo tenes instalado usa el comando gcc --version. sino busca la forma de instalarlo qlia
+
 
   ======= instalar NVM ==========
 

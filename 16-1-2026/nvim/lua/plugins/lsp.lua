@@ -27,7 +27,7 @@ return {
             end, opts)
         end
 
-        require("lspconfig").lua_ls.setup({
+        vim.lsp.config('lua_ls',{
             on_attach = on_attach,
             settings = {
                 Lua = {
@@ -36,8 +36,9 @@ return {
                 },
             }
         })
+        vim.lsp.enable('lua_ls')
 
-        require("lspconfig").eslint.setup({
+        vim.lsp.config('eslint',{
             settings = {
                 format = false, -- Desactiva el formateo de ESLint (¡clave!)
                 -- Ajustes para Flat Config (v3+)
@@ -57,6 +58,7 @@ return {
                 client.server_capabilities.documentRangeFormattingProvider = false
             end
         })
+        vim.lsp.enable('eslint')
 
         local servers = {
             "marksman",
@@ -74,10 +76,12 @@ return {
             "hls",
         }
         for _, server in ipairs(servers) do
-            require("lspconfig")[server].setup({
+            vim.lsp.config(server, {
                 on_attach = on_attach,
             })
+            vim.lsp.enable(server)
         end
     end
 
 }
+
